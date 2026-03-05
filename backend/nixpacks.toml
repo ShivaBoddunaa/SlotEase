@@ -1,0 +1,25 @@
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
+
+[start]
+cmd = "uvicorn main:app --host 0.0.0.0 --port $PORT"
+```
+
+### Push to GitHub:
+```
+cd D:\SlotEase
+git add .
+git commit -m "Fix Railway deployment config"
+git push
+```
+
+---
+
+## Then on Railway:
+```
+1. Click "Settings" tab
+2. Scroll to Source section
+3. Click "Add Root Directory"
+4. Type: backend
+5. Click Save
+6. Click "Deploy" button
