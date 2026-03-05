@@ -125,6 +125,7 @@ export default function App() {
     fetchAll();
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     fetchAll();
   }, []);
