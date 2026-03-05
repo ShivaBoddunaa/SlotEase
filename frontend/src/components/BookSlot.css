@@ -1,0 +1,53 @@
+.book-slot-page {
+    animation: fadeIn 0.3s ease;
+}
+
+.page-desc {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+.slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e8eaed;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    margin-top: 20px;
+}
+
+.empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.empty-state h3 {
+    font-size: 18px;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    color: #666;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

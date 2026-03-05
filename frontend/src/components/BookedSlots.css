@@ -1,0 +1,96 @@
+.booked-slots-page {
+    animation: fadeIn 0.3s ease;
+}
+
+.empty-booked-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e8eaed;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    margin-top: 20px;
+}
+
+.empty-booked-state h3 {
+    font-size: 18px;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.empty-booked-state p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.book-shortcut-btn {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.book-shortcut-btn:hover {
+    background: #1558b0;
+}
+
+.booked-summary {
+    font-size: 16px;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.booked-note {
+    background: #f0f8ff;
+    color: #10b981;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid #cce5ff;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.booked-by-cell {
+    font-weight: 500;
+    color: #444 !important;
+}
+
+.booked-at-cell {
+    font-size: 13px !important;
+    color: #666 !important;
+}
+
+.cancel-booking-btn {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1.5px solid #ffcdd2;
+    background: #fffafa;
+    color: #ea4335;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.cancel-booking-btn:hover {
+    background: #fce8e6;
+    border-color: #ea4335;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

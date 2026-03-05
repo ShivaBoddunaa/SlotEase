@@ -1,0 +1,13 @@
+.modal-desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.edit-confirm {
+    background: #34a853 !important;
+}
+
+.edit-confirm:hover {
+    background: #2d9047 !important;
+}

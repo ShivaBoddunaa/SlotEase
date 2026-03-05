@@ -1,0 +1,68 @@
+.slot-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.slot-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.slot-card.available {
+    border-left: 5px solid #34a853;
+}
+
+.slot-card.booked {
+    border-left: 5px solid #ea4335;
+    opacity: 0.75;
+}
+
+.slot-card h3 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.badge {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.available-badge {
+    color: #34a853;
+}
+
+.booked-badge {
+    color: #ea4335;
+}
+
+.booked-by {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+}
+
+.book-btn {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 9px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.book-btn:hover {
+    background: #059669;
+}
