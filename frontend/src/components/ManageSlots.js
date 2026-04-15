@@ -1,7 +1,7 @@
 import React from 'react';
 import './ManageSlots.css';
 
-export default function ManageSlots({ slots, onEdit, onDelete }) {
+export default function ManageSlots({ slots, onAdd, onEdit, onDelete }) {
     return (
         <div className="manage-slots-page">
             <div className="page-header">
@@ -9,6 +9,9 @@ export default function ManageSlots({ slots, onEdit, onDelete }) {
                     <h1 className="page-title">Manage Slots</h1>
                     <p className="page-subtitle">Edit or delete your time slots</p>
                 </div>
+                <button className="add-slot-btn" onClick={onAdd} style={{ padding: '10px 16px', background: '#3b82f6', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: '500' }}>
+                    + Add New Slot
+                </button>
             </div>
             <div className="manage-note">
                 ⚠️ <strong>Note:</strong> Booked slots cannot be deleted. Cancel the booking first.

@@ -11,6 +11,7 @@ import BookingModal from "./components/BookingModal";
 import EditModal from "./components/EditModal";
 import ConfirmModal from "./components/ConfirmModal";
 import Toast from "./components/Toast";
+import AddModal from "./components/AddModal";
 import "./App.css";
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [selectedSlot, setSelectedSlot] = useState(null);
   const [selectedEditSlot, setSelectedEditSlot] = useState(null);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [confirm, setConfirm] = useState({
     isOpen: false,
     title: "",
@@ -146,7 +148,7 @@ export default function App() {
             <ViewSlots slots={slots} onBook={handleBook} />
           )}
           {activePage === "manage" && (
-            <ManageSlots slots={slots} onEdit={handleEdit} onDelete={handleDelete} />
+            <ManageSlots slots={slots} onAdd={() => setIsAddModalOpen(true)} onEdit={handleEdit} onDelete={handleDelete} />
           )}
           {activePage === "booked" && (
             <BookedSlots bookedSlots={bookedSlots} onCancel={handleCancelBooking} />
@@ -161,6 +163,12 @@ export default function App() {
           slot={selectedEditSlot}
           onClose={() => setSelectedEditSlot(null)}
           onSuccess={() => { showToast("Slot edited successfully", "success"); fetchAll(); setSelectedEditSlot(null); }}
+        />
+      )}
+      {isAddModalOpen && (
+        <AddModal
+          onClose={() => setIsAddModalOpen(false)}
+          onSuccess={() => { showToast("Slot added successfully", "success"); fetchAll(); setIsAddModalOpen(false); }}
         />
       )}
       <ConfirmModal

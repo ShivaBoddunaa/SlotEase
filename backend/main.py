@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import sqlite_patch
 import mysql.connector
 import os
 from dotenv import load_dotenv
